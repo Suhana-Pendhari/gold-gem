@@ -33,11 +33,11 @@ const suggestionTags = document.querySelectorAll('.suggestion-tags span');
 const jewelryData = {
     rings: [
         { id: 1, name: "Diamond Solitaire Ring", category: "engagement", price: 2499.99, img: "https://images.unsplash.com/photo-1603561596112-0a132b757442?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80" },
-        { id: 2, name: "Eternity Band", category: "wedding", price: 1899.99, img: "https://images.unsplash.com/photo-1605100940451-7b70e5d4c888?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" },
-        { id: 3, name: "Sapphire Halo Ring", category: "gemstone", price: 2199.99, img: "https://images.unsplash.com/photo-1594576722512-582d5577dc56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" },
+        { id: 2, name: "Eternity Band", category: "wedding", price: 1899.99, img: "https://i.etsystatic.com/17565120/r/il/4c2245/5798003911/il_570xN.5798003911_978t.jpg" },
+        { id: 3, name: "Sapphire Halo Ring", category: "gemstone", price: 2199.99, img: "https://i.etsystatic.com/29146180/r/il/bb6e04/3233669662/il_570xN.3233669662_j63u.jpg" },
         { id: 4, name: "Classic Gold Band", category: "wedding", price: 899.99, img: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" },
-        { id: 5, name: "Three Stone Diamond Ring", category: "diamond", price: 3299.99, img: "https://images.unsplash.com/photo-1603561596072-756b2f5d3d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" },
-        { id: 6, name: "Emerald Cut Diamond Ring", category: "engagement", price: 2799.99, img: "https://images.unsplash.com/photo-1603561596072-756b2f5d3d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" }
+        { id: 5, name: "Three Stone Diamond Ring", category: "diamond", price: 3299.99, img: "https://www.ornatejewels.com/cdn/shop/files/OJR0066RB-F.jpg?v=1760617874" },
+        { id: 6, name: "Emerald Cut Diamond Ring", category: "engagement", price: 2799.99, img: "https://cdn.shopify.com/s/files/1/0039/6994/1568/files/Copy_of_10608-3_1.jpg?v=1672149296" }
     ],
     necklaces: [
         { id: 7, name: "Diamond Pendant Necklace", category: "diamond", price: 1599.99, img: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" },
@@ -48,10 +48,10 @@ const jewelryData = {
         { id: 12, name: "Heart Locket Necklace", category: "gold", price: 599.99, img: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" }
     ],
     earrings: [
-        { id: 13, name: "Diamond Stud Earrings", category: "diamond", price: 1299.99, img: "https://images.unsplash.com/photo-1594576722512-582d5577dc56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" },
+        { id: 13, name: "Diamond Stud Earrings", category: "diamond", price: 1299.99, img: "https://www.miabytanishq.com/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw488f560c/images/Mia/hi-res/2819SCT_1.jpg?sw=480&sh=480" },
         { id: 14, name: "Gold Hoop Earrings", category: "gold", price: 499.99, img: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" },
         { id: 15, name: "Pearl Drop Earrings", category: "pearl", price: 899.99, img: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" },
-        { id: 16, name: "Emerald Chandelier Earrings", category: "gemstone", price: 1699.99, img: "https://images.unsplash.com/photo-1594576722512-582d5577dc56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" },
+        { id: 16, name: "Emerald Chandelier Earrings", category: "gemstone", price: 1699.99, img: "https://i.etsystatic.com/5997489/r/il/089a9f/2528632716/il_570xN.2528632716_90ib.jpg" },
         { id: 17, name: "Diamond Huggie Earrings", category: "diamond", price: 1099.99, img: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" },
         { id: 18, name: "Gold Threader Earrings", category: "gold", price: 349.99, img: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" }
     ]
