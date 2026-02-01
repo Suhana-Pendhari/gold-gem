@@ -3,11 +3,429 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gleam & Grace | Luxury Jewelry Collection</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💎</text></svg>">
 </head>
 <body>
-    <h1>Gold Shop</h1>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="diamond-loader">
+            <div class="diamond"></div>
+            <div class="diamond"></div>
+            <div class="diamond"></div>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i class="fas fa-gem"></i>
+                    <span>Gleam & Grace</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#collections" class="nav-link">Collections</a></li>
+                    <li><a href="#rings" class="nav-link">Rings</a></li>
+                    <li><a href="#necklaces" class="nav-link">Necklaces</a></li>
+                    <li><a href="#earrings" class="nav-link">Earrings</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li class="nav-icons">
+                        <a href="#" class="nav-icon" id="searchBtn"><i class="fas fa-search"></i></a>
+                        <a href="#" class="nav-icon" id="wishlistBtn"><i class="far fa-heart"></i><span class="wishlist-count">0</span></a>
+                        <a href="#cart" class="nav-icon cart-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <span class="close-search">&times;</span>
+            <h2>Find Your Perfect Piece</h2>
+            <form class="search-form">
+                <input type="text" placeholder="Search for rings, necklaces, diamonds..." autocomplete="off">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <div class="search-suggestions">
+                <h3>Popular Searches</h3>
+                <div class="suggestion-tags">
+                    <span>Engagement Rings</span>
+                    <span>Gold Necklaces</span>
+                    <span>Diamond Earrings</span>
+                    <span>Pearl Jewelry</span>
+                    <span>Birthstone Rings</span>
+                    <span>Wedding Bands</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Where <span class="highlight">Elegance</span> Meets <span class="highlight">Craftsmanship</span></h1>
+                <p class="hero-subtitle">Discover our exclusive collection of handcrafted jewelry, where every piece tells a story of timeless beauty and precision.</p>
+                <a href="#collections" class="btn btn-primary">Explore Collections</a>
+                <a href="#rings" class="btn btn-secondary">New Arrivals</a>
+            </div>
+            <div class="hero-image">
+                <div class="sparkle-animation">
+                    <i class="fas fa-star sparkle-1"></i>
+                    <i class="fas fa-star sparkle-2"></i>
+                    <i class="fas fa-star sparkle-3"></i>
+                    <i class="fas fa-star sparkle-4"></i>
+                    <i class="fas fa-star sparkle-5"></i>
+                </div>
+                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Luxury jewelry collection" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section class="section collections" id="collections">
+        <div class="container">
+            <h2 class="section-title">Our <span class="highlight">Collections</span></h2>
+            <p class="section-subtitle">Handcrafted pieces that celebrate life's most precious moments.</p>
+            
+            <div class="collections-grid">
+                <div class="collection-card">
+                    <div class="collection-img">
+                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Diamond Collection">
+                        <div class="collection-overlay">
+                            <h3>Diamond Dreams</h3>
+                            <p>Exquisite diamond pieces that capture and reflect light in mesmerizing ways.</p>
+                            <a href="#" class="collection-link">View Collection <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="collection-card">
+                    <div class="collection-img">
+                        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Gold Collection">
+                        <div class="collection-overlay">
+                            <h3>Golden Elegance</h3>
+                            <p>Timeless gold jewelry that radiates warmth and sophistication.</p>
+                            <a href="#" class="collection-link">View Collection <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="collection-card">
+                    <div class="collection-img">
+                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Pearl Collection">
+                        <div class="collection-overlay">
+                            <h3>Pearl Perfection</h3>
+                            <p>Classic pearl jewelry that embodies grace and timeless beauty.</p>
+                            <a href="#" class="collection-link">View Collection <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rings Section -->
+    <section class="section rings" id="rings">
+        <div class="container">
+            <h2 class="section-title">Exquisite <span class="highlight">Rings</span></h2>
+            <p class="section-subtitle">Symbols of love, commitment, and personal style.</p>
+            
+            <div class="jewelry-filter">
+                <button class="filter-btn active" data-filter="all">All Rings</button>
+                <button class="filter-btn" data-filter="engagement">Engagement</button>
+                <button class="filter-btn" data-filter="wedding">Wedding Bands</button>
+                <button class="filter-btn" data-filter="diamond">Diamond</button>
+                <button class="filter-btn" data-filter="gemstone">Gemstone</button>
+            </div>
+            
+            <div class="jewelry-grid">
+                <!-- Ring cards will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Necklaces Section -->
+    <section class="section necklaces" id="necklaces">
+        <div class="container">
+            <h2 class="section-title">Statement <span class="highlight">Necklaces</span></h2>
+            <p class="section-subtitle">Centerpiece pieces that elevate any ensemble.</p>
+            
+            <div class="jewelry-grid">
+                <!-- Necklace cards will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Earrings Section -->
+    <section class="section earrings" id="earrings">
+        <div class="container">
+            <h2 class="section-title">Dazzling <span class="highlight">Earrings</span></h2>
+            <p class="section-subtitle">The perfect finishing touch to complete your look.</p>
+            
+            <div class="jewelry-grid">
+                <!-- Earring cards will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">Our <span class="highlight">Craftsmanship</span></h2>
+                <p>Founded in 1995, Gleam & Grace has been creating exquisite jewelry that celebrates life's most precious moments. Our master jewelers combine traditional techniques with contemporary design to create pieces that are both timeless and modern.</p>
+                <p>Each piece in our collection is crafted with meticulous attention to detail, using only the finest materials. We source ethical diamonds and gemstones, and our precious metals are recycled whenever possible.</p>
+                <p>From engagement rings that symbolize eternal love to heirloom pieces meant to be treasured for generations, our jewelry is designed to become part of your story.</p>
+                
+                <div class="craftsmanship-features">
+                    <div class="craft-feature">
+                        <i class="fas fa-hand-sparkles"></i>
+                        <h3>Handcrafted</h3>
+                        <p>Each piece is meticulously crafted by our skilled artisans</p>
+                    </div>
+                    <div class="craft-feature">
+                        <i class="fas fa-gem"></i>
+                        <h3>Ethical Sourcing</h3>
+                        <p>We use conflict-free diamonds and ethically sourced gemstones</p>
+                    </div>
+                    <div class="craft-feature">
+                        <i class="fas fa-award"></i>
+                        <h3>Lifetime Warranty</h3>
+                        <p>All our jewelry comes with a lifetime craftsmanship warranty</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1603561596112-0a132b757442?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80" alt="Jeweler at work">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Visit Our <span class="highlight">Boutique</span></h2>
+            <p class="section-subtitle">Experience the beauty of our jewelry in person or contact us for custom designs.</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Our Boutique</h3>
+                            <p>456 Diamond Avenue, Jewel City, JC 10101</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Call Us</h3>
+                            <p>(555) 987-6543</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Us</h3>
+                            <p>info@gleamandgrace.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Opening Hours</h3>
+                            <p>Mon-Fri: 10am-8pm</p>
+                            <p>Sat: 10am-6pm</p>
+                            <p>Sun: 12pm-5pm</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-ring"></i>
+                        <div>
+                            <h3>Custom Design</h3>
+                            <p>Book a consultation to create your perfect custom piece</p>
+                            <a href="#" class="btn btn-small">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <h3>Send Us a Message</h3>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Join Our Golden Circle</h2>
+                <p>Subscribe to receive exclusive offers, new collection announcements, and styling tips.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+                <p class="newsletter-note">By subscribing, you agree to our Privacy Policy. You may unsubscribe at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="#" class="logo footer-logo">
+                        <i class="fas fa-gem"></i>
+                        <span>Gleam & Grace</span>
+                    </a>
+                    <p>Crafting timeless jewelry since 1995. Each piece is a celebration of elegance, quality, and personal expression.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="#rings">Rings</a></li>
+                        <li><a href="#necklaces">Necklaces</a></li>
+                        <li><a href="#earrings">Earrings</a></li>
+                        <li><a href="#collections">Collections</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Custom Design</a></li>
+                        <li><a href="#">Jewelry Repair</a></li>
+                        <li><a href="#">Ring Sizing</a></li>
+                        <li><a href="#">Engagement Consultations</a></li>
+                        <li><a href="#">Gift Wrapping</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Gleam & Grace. All rights reserved. | Crafted with <i class="fas fa-heart"></i> for jewelry enthusiasts everywhere.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Shopping Bag</h2>
+                <span class="close-cart">&times;</span>
+            </div>
+            <div class="cart-body">
+                <div class="cart-items">
+                    <!-- Cart items will be added here by JavaScript -->
+                </div>
+                <div class="cart-empty">
+                    <i class="fas fa-shopping-bag"></i>
+                    <p>Your bag is empty</p>
+                    <a href="#collections" class="btn btn-small">Start Shopping</a>
+                </div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="total-price">$0.00</span>
+                </div>
+                <button class="btn btn-primary checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wishlist Modal -->
+    <div class="wishlist-modal" id="wishlistModal">
+        <div class="wishlist-content">
+            <div class="wishlist-header">
+                <h2>Your Wishlist</h2>
+                <span class="close-wishlist">&times;</span>
+            </div>
+            <div class="wishlist-body">
+                <div class="wishlist-items">
+                    <!-- Wishlist items will be added here by JavaScript -->
+                </div>
+                <div class="wishlist-empty">
+                    <i class="far fa-heart"></i>
+                    <p>Your wishlist is empty</p>
+                    <p>Save items you love by clicking the heart icon</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <i class="fas fa-check-circle"></i>
+        <span>Item added to bag successfully!</span>
+    </div>
+
+    <!-- Wishlist Success Message -->
+    <div class="success-message wishlist-message" id="wishlistMessage">
+        <i class="fas fa-heart"></i>
+        <span>Item added to wishlist!</span>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
